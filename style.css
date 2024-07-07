@@ -1,0 +1,74 @@
+/* CSS Reset */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  height: 100vh;
+  line-height: 1.5;
+  display: grid;
+  gap: 16px;
+  place-content: center;
+  text-align: center;
+}
+
+#title {
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  -webkit-animation: hue 10s infinite linear;
+}
+
+.quote-box {
+  width: 400px;
+  padding: 16px;
+  border: 5px solid;
+  border-image: linear-gradient(45deg, purple, orange) 1;
+}
+
+#author {
+  float: right;
+  color: gray;
+  font-weight: bold;
+  font-style: emphasis;
+}
+
+#btn {
+  padding: 8px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: smooth;
+  border: 2px solid;
+  background-color: black;
+  color: white;
+}
+
+#btn:hover {
+  background-color: white;
+  color: black;
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
